@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.input-section {
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.salary-breakdown {
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.salary-breakdown h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.salary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #bdc3c7;
+}
+
+.salary-item:last-child {
+  border-bottom: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: 2px solid #3498db;
+}
+
+.salary-item span:first-child {
+  color: #555;
+}
+
+.salary-item span:last-child {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.result h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.result p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.grade-result {
+  background-color: #d5f4e6;
+  border-left: 4px solid #27ae60;
+}
+
+.grade-result.grade-a {
+  background-color: #d4edda;
+  border-left-color: #28a745;
+}
+
+.grade-result.grade-b {
+  background-color: #d1ecf1;
+  border-left-color: #17a2b8;
+}
+
+.grade-result.grade-c {
+  background-color: #fff3cd;
+  border-left-color: #ffc107;
+}
+
+.grade-result.grade-exc {
+  background-color: #f8d7da;
+  border-left-color: #dc3545;
+}
+
+.bonus-result {
+  background-color: #e7f3ff;
+  border-left: 4px solid #3498db;
+}
+
+.bonus-result p {
+  color: #2c3e50;
+}
+
+.grade-result p {
+  color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .card {
+    padding: 25px;
+  }
+}

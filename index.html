@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Frameworks - Lab Experiments</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        .experiments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .experiment-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .experiment-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .experiment-number {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .experiment-card h2 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .experiment-card p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .features li {
+            color: #7f8c8d;
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .view-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        .view-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .info-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .info-section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tech-badge {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #ecf0f1;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .experiments-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Full Stack Frameworks</h1>
+            <p class="subtitle">Lab Experiments Collection</p>
+        </header>
+
+        <div class="info-section">
+            <h2>About This Collection</h2>
+            <p>This repository contains a series of ReactJS applications demonstrating various concepts in full-stack
+                development. Each experiment focuses on different functionalities while maintaining a consistent, clean,
+                and elegant design.</p>
+
+            <h3 style="color: #2c3e50; margin-top: 20px; margin-bottom: 10px;">Technology Stack</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">React 19.2.0</span>
+                <span class="tech-badge">Vite 7.2.4</span>
+                <span class="tech-badge">JavaScript (ES6+)</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">GitHub Pages</span>
+            </div>
+        </div>
+
+        <div class="experiments-grid">
+            <a href="./expt-01/" class="experiment-card">
+                <span class="experiment-number">Experiment 01</span>
+                <h2>Math Utilities</h2>
+                <p>A comprehensive math utilities application with three core functionalities.</p>
+                <ul class="features">
+                    <li>Factorial Calculator</li>
+                    <li>Fibonacci Series Generator</li>
+                    <li>Prime Number Checker</li>
+                </ul>
+                <span class="view-btn">View Experiment →</span>
+            </a>
+
+            <a href="./expt-02/" class="experiment-card">
+                <span class="experiment-number">Experiment 02</span>
+                <h2>Number to Words Converter</h2>
+                <p>Convert numbers into their word representations with detailed calculation steps.</p>
+                <ul class="features">
+                    <li>Supports numbers up to billions</li>
+                    <li>Step-by-step conversion display</li>
+                    <li>Input validation</li>
+                </ul>
+                <span class="view-btn">View Experiment →</span>
+            </a>
+
+            <a href="./expt-03/" class="experiment-card">
+                <span class="experiment-number">Experiment 03</span>
+                <h2>Math Utilities</h2>
+                <p>Enhanced math utilities with improved user interface and functionality.</p>
+                <ul class="features">
+                    <li>Factorial calculations</li>
+                    <li>Fibonacci sequences</li>
+                    <li>Prime number validation</li>
+                </ul>
+                <span class="view-btn">View Experiment →</span>
+            </a>
+
+            <a href="./expt-04/" class="experiment-card">
+                <span class="experiment-number">Experiment 04</span>
+                <h2>Simple Calculator</h2>
+                <p>A fully functional calculator with standard arithmetic operations.</p>
+                <ul class="features">
+                    <li>Basic operations (+, -, ×, ÷)</li>
+                    <li>Clean, intuitive interface</li>
+                    <li>Responsive design</li>
+                </ul>
+                <span class="view-btn">View Experiment →</span>
+            </a>
+
+            <a href="./expt-05/" class="experiment-card">
+                <span class="experiment-number">Experiment 05</span>
+                <h2>Interactive Math Game Calculator</h2>
+                <p>A dual-mode application combining a calculator with an educational math game for kids.</p>
+                <ul class="features">
+                    <li>Functional calculator</li>
+                    <li>Interactive math game</li>
+                    <li>Multiple difficulty levels</li>
+                    <li>Score tracking system</li>
+                </ul>
+                <span class="view-btn">View Experiment →</span>
+            </a>
+        </div>
+
+        <div class="info-section">
+            <h2>Design Philosophy</h2>
+            <p>All experiments follow a consistent design language:</p>
+            <ul class="features" style="margin-top: 15px;">
+                <li>Clean, minimal aesthetic with light gray backgrounds</li>
+                <li>White cards with subtle shadows for depth</li>
+                <li>Blue accent color (#3498db) for interactive elements</li>
+                <li>System fonts (Segoe UI) for optimal readability</li>
+                <li>Responsive design for all screen sizes</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Full Stack Frameworks - Lab Experiments</p>
+            <p>Built with React and Vite | Deployed on GitHub Pages</p>
+        </footer>
+    </div>
+</body>
+
+</html>
